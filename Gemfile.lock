@@ -48,6 +48,7 @@ GEM
     execjs (2.0.1)
     factory_girl (4.2.0)
       activesupport (>= 3.0.0)
+    going_postal (0.1.3)
     hike (1.2.3)
     i18n (0.6.5)
     jbuilder (1.5.1)
@@ -155,6 +156,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.0.0)
   factory_girl
+  going_postal
   jbuilder (~> 1.2)
   jquery-rails
   launchy

@@ -7,7 +7,7 @@ describe Building do
   it { should have_valid(:city).when('Asheville') }
   it { should_not have_valid(:city).when(nil, '') }
 
-  it { should have_valid(:state).when('North Carolina') }
+  it { should have_valid(:state).when('North Carolina', 'NC') }
   it { should_not have_valid(:state).when(nil, '') }
 
   it { should have_valid(:postal_code).when(28730) }

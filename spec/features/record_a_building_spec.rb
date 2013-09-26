@@ -24,7 +24,7 @@ feature 'record a building', %Q{
     visit new_building_url
     fill_in 'Street address', with: '221B Baker St'
     fill_in 'City', with: 'Asheville'
-    fill_in 'State', with: 'North Carolina'
+    select state, from: 'State'
     fill_in 'Postal code', with: 28730
     click_button 'Record'
 

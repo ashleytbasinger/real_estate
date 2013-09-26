@@ -40,6 +40,7 @@ group :development, :test do
   gem 'factory_girl'
   gem 'pry-rails'
   gem 'launchy'
+  gem 'going_postal'
 
 end
 # Use ActiveModel has_secure_password
