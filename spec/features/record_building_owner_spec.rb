@@ -35,3 +35,4 @@ feature 'record building owner', %Q{
     expect(page).to have_content("can't be blank")
     expect(Owner.count).to eql(prev_owner_count)
   end
+end
