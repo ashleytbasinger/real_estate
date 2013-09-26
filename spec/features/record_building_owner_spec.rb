@@ -17,8 +17,8 @@ feature 'record building owner', %Q{
 
   scenario 'specify valid information' do
     prev_owner_count = Owner.count
-    
-    visit new_owner_url
+
+    visit new_owner_path
     fill_in "First name", with: 'Rocky'
     fill_in "Last name", with: 'Balboa'
     fill_in "Email", with: 'eyeofthetiger@boxing.com'
@@ -31,7 +31,7 @@ feature 'record building owner', %Q{
   scenario 'specify invalid information' do
     prev_owner_count = Owner.count
 
-    visit new_owner_url
+    visit new_owner_path
 
     click_button 'Record'
     expect(page).to have_content("can't be blank")

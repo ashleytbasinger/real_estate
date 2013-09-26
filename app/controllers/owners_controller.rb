@@ -13,12 +13,12 @@ class OwnersController < ApplicationController
     end
   end
 
+  def index
+    @owners = Owner.all
+  end
+
   protected
   def owner_params
     params.require(:owner).permit(:first_name, :last_name, :email)
-  end
-
-  def set_owner
-    @owner = Owner.find(params[:id])
   end
 end

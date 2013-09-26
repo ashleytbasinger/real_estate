@@ -1,5 +1,7 @@
 FactoryGirl.define do
   factory :owner do
-    name 'owner'
+    first_name "Rocky"
+    last_name "Balboa"
+    email "fists@boxing.com"
   end
 end

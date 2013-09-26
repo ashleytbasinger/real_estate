@@ -9,6 +9,6 @@ class CreateOwners < ActiveRecord::Migration
       t.timestamps
     end
 
-    # add_column :buildings, :owner_id, :integer
+    add_column :buildings, :owner_id, :integer
   end
 end
