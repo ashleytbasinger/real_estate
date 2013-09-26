@@ -7,7 +7,7 @@ class BuildingsController < ApplicationController
     @building = Building.new(building_params)
 
     if @building.save
-      redirect_to new_building_path, notice: 'Recorded successfully'
+      redirect_to buildings_path, notice: 'Recorded successfully'
     else
       render :new
     end
@@ -28,10 +28,6 @@ class BuildingsController < ApplicationController
 
   protected
   def building_params
-    params.require(:building).permit(:street_address, :city, :state, :postal_code)
-  end
-
-  def set_building
-    @building = Building.find(params[:id])
+    params.require(:building).permit(:street_address, :city, :state, :postal_code, :owner_id)
   end
 end

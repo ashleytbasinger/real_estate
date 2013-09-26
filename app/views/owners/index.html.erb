@@ -1,0 +1,21 @@
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Company</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @owners.each do |owner| %>
+      <tr>  
+        <td><%= owner.first_name %></td>
+        <td><%= owner.last_name %></td>
+        <td><%= owner.email %></td>
+        <td><%= owner.company %></td>
+        <td></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

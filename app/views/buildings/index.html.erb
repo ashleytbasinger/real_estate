@@ -1,0 +1,23 @@
+<table>
+  <thead>
+    <tr>
+      <th>Street address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Postal code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @buildings.each do |building| %>
+      <tr>  
+        <td><%= building.street_address %></td>
+        <td><%= building.city %></td>
+        <td><%= building.state %></td>
+        <td><%= building.postal_code %></td>
+        <td><%= building.description %></td>
+        <td></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

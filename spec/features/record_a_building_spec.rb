@@ -20,22 +20,25 @@ feature 'record a building', %Q{
 
   scenario 'specify valid information' do
     prev_count = Building.count
+    FactoryGirl.create(:owner, last_name: 'Balboa')
 
-    visit new_building_url
+    visit new_building_path
     fill_in 'Street address', with: '221B Baker St'
     fill_in 'City', with: 'Asheville'
-    select state, from: 'State'
+    select 'Vermont', from: 'State'
     fill_in 'Postal code', with: 28730
+    select 'Balboa', from: 'Owner'
     click_button 'Record'
 
     expect(page).to have_content('Recorded successfully')
     expect(Building.count).to eql(prev_count + 1)
+    expect(Building.last.owner).to_not be_nil
   end
 
   scenario 'specify invalid information' do
     prev_count = Building.count
 
-    visit new_building_url
+    visit new_building_path
 
     click_button 'Record'
     expect(page).to have_content("can't be blank")

@@ -36,11 +36,14 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'shoulda'
+  gem 'shoulda-matchers'
   gem 'valid_attribute'
   gem 'factory_girl'
   gem 'pry-rails'
   gem 'launchy'
+  gem 'simple_form'
   gem 'going_postal'
+  gem 'database_cleaner' #hope this one works! It looks promising.
 
 end
 # Use ActiveModel has_secure_password
