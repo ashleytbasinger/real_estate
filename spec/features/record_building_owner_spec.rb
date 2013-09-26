@@ -16,6 +16,8 @@ feature 'record building owner', %Q{
   #   and I am redirected to enter another new owner
 
   scenario 'specify valid information' do
+    prev_owner_count = Owner.count
+    
     visit new_owner_url
     fill_in "First name", with: 'Rocky'
     fill_in "Last name", with: 'Balboa'
